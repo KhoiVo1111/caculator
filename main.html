@@ -1,0 +1,38 @@
+function add(a, b) {
+  return a + b;
+}
+
+function subtract(a, b) {
+  return a - b;
+}
+
+function multiply(a, b) {
+  return a * b;
+}
+
+function divide(a, b) {
+  return a / b;
+}
+
+function calculate() {
+  var number1 = document.getElementById("number1").value;
+  var number2 = document.getElementById("number2").value;
+  var operator = document.getElementById("operator").value;
+
+  switch (operator) {
+    case "+":
+      result = add(number1, number2);
+      break;
+    case "-":
+      result = subtract(number1, number2);
+      break;
+    case "*":
+      result = multiply(number1, number2);
+      break;
+    case "/":
+      result = divide(number1, number2);
+      break;
+  }
+
+  document.getElementById("result").innerHTML = result;
+}
